@@ -9,7 +9,7 @@
 
 ;--------------------------------
 ;define
-  !define SRCDIR "C:\Users\deogracia\Desktop\creation de jeux\NES\famitracker-setup\src"
+  !define SRCDIR "src"
   
   !define VERSION "0.4.6"
   
@@ -53,6 +53,26 @@
  
   !insertmacro MUI_LANGUAGE "English"
   !insertmacro MUI_LANGUAGE "French"
+  
+;  LoadLanguageFile "${NSISDIR}\Contrib\Language files\English.nlf"
+;--------------------------------
+;Version Information
+
+  VIProductVersion "${VERSION}.0"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "ProductName" "${PRODUCTNAME}"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "Comments" "FamiTracker is a free windows tracker for producing music for the NES/Famicom-systems"
+  ;VIAddVersionKey /LANG=${LANG_ENGLISH} "CompanyName" "Fake company"
+  ;VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalTrademarks" "Test Application is a trademark of Fake company"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "jsr@famitracker.com"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "${PRODUCTNAME} - ${VERSION} setup file"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "2025-03-08"
+  
+  ; French
+  VIAddVersionKey /LANG=${LANG_FRENCH} "ProductName" "${PRODUCTNAME}"
+  VIAddVersionKey /LANG=${LANG_FRENCH} "Comments" "FamiTracker permet de faire de la music pour les systèmes NES/Famicom-systems"
+  VIAddVersionKey /LANG=${LANG_FRENCH} "LegalCopyright" "jsr@famitracker.com"
+  VIAddVersionKey /LANG=${LANG_FRENCH} "FileDescription" "Fichier d'installation de ${PRODUCTNAME} - ${VERSION}"
+  VIAddVersionKey /LANG=${LANG_FRENCH} "FileVersion" "2025-03-08"  
   
 ;--------------------------------
 ;Installer Sections
