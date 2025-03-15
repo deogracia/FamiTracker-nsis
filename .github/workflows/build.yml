@@ -15,7 +15,7 @@ jobs:
       - name: Install NSIS
         shell: pwsh
         run: |
-          winget  --disable-interactivity install -e --silent --id NSIS.NSIS
+          winget install --disable-interactivity -e --silent --id NSIS.NSIS
       - name: print nsis version
         run: makensis /VERSION
       - name: build installer
