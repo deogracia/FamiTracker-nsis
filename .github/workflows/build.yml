@@ -19,4 +19,6 @@ jobs:
       - name: print nsis version
         run: makensis /VERSION
       - name: build installer
-        run: makensis /V4 famitracker.nsi
+        run: |
+          dir
+          makensis /V4 famitracker.nsi
