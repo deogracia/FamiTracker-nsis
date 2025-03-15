@@ -13,6 +13,7 @@ jobs:
         run: |
           irm asheroto.com/winget | iex
       - name: Install NSIS
+        shell: pwsh
         run: |
           winget  --disable-interactivity install -e --silent --id NSIS.NSIS
       - name: print nsis version
