@@ -19,6 +19,16 @@ jobs:
           winget install --accept-source-agreements --accept-package-agreements --disable-interactivity -e --silent --id NSIS.NSIS
       - name: print nsis version
         run: makensis /VERSION
+      - name: get famitracker binary file
+        uses: carlosperate/download-file-action@v2
+        with:
+          file-url: http://famitracker.com/files/FamiTracker-v0.4.6.zip
+          location: './src'
+          sha256: 'EDC24CE14A1FC402DDB87CACDCA497EA25BB648286B879EDFC93A4E9D57AD5DC'
+      - name: extract famitracker binary archive file
+        run: |
+          7z x FamiTracker-v0.4.6.zip
+          rm FamiTracker-v0.4.6.zip
       - name: build installer
         run: |
           dir
