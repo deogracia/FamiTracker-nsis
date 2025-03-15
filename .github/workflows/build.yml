@@ -10,7 +10,8 @@ jobs:
     steps:
       - name: Install winget
         shell: pwsh
-        run: Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+        run: |
+          irm asheroto.com/winget | iex -Force
       - name: Install NSIS
         run: |
           winget  --disable-interactivity install -e --silent --id NSIS.NSIS
