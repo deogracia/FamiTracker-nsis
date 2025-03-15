@@ -1,0 +1,18 @@
+---
+name: build installer
+
+on:
+  push:
+    branches:
+      - *
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Install NSIS
+        run: |
+          winget  --disable-interactivity install -e --silent --id NSIS.NSIS
+      - name: print nsis version
+        run: makensis /VERSION
+      - name: build installer
+        run: makensis /V4 famitracker.nsi
