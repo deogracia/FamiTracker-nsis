@@ -11,7 +11,7 @@ jobs:
       - name: Install winget
         shell: pwsh
         run: |
-          irm asheroto.com/winget | iex -Force
+          irm asheroto.com/winget | iex
       - name: Install NSIS
         run: |
           winget  --disable-interactivity install -e --silent --id NSIS.NSIS
