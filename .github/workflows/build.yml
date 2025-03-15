@@ -8,6 +8,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - name: Install winget
+        shell: pwsh
+        run: Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
       - name: Install NSIS
         run: |
           winget  --disable-interactivity install -e --silent --id NSIS.NSIS
