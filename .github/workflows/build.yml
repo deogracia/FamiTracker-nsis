@@ -8,6 +8,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Install winget
         uses: Cyberboss/install-winget@v1
         with:
