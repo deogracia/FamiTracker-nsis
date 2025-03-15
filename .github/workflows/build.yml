@@ -12,6 +12,7 @@ jobs:
         shell: pwsh
         run: |
           irm asheroto.com/winget | iex
+          Get-AppxPackage microsoft.desktopappinstaller
       - name: Install NSIS
         shell: pwsh
         run: |
