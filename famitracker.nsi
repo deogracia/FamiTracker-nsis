@@ -15,6 +15,8 @@
   
   !define PRODUCTNAME "FamiTracker"
   
+  !define COMPILE_DATE "2025-03-15"
+  
 ;--------------------------------
 ;General
 
@@ -65,14 +67,14 @@
   ;VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalTrademarks" "Test Application is a trademark of Fake company"
   VIAddVersionKey /LANG=${LANG_ENGLISH} "LegalCopyright" "jsr@famitracker.com"
   VIAddVersionKey /LANG=${LANG_ENGLISH} "FileDescription" "${PRODUCTNAME} - ${VERSION} setup file"
-  VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "2025-03-08"
+  VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "${COMPILE_DATE}"
   
   ; French
   VIAddVersionKey /LANG=${LANG_FRENCH} "ProductName" "${PRODUCTNAME}"
   VIAddVersionKey /LANG=${LANG_FRENCH} "Comments" "FamiTracker permet de faire de la music pour les systèmes NES/Famicom-systems"
   VIAddVersionKey /LANG=${LANG_FRENCH} "LegalCopyright" "jsr@famitracker.com"
   VIAddVersionKey /LANG=${LANG_FRENCH} "FileDescription" "Fichier d'installation de ${PRODUCTNAME} - ${VERSION}"
-  VIAddVersionKey /LANG=${LANG_FRENCH} "FileVersion" "2025-03-08"  
+  VIAddVersionKey /LANG=${LANG_FRENCH} "FileVersion" "${COMPILE_DATE}"  
   
 ;--------------------------------
 ;Installer Sections
