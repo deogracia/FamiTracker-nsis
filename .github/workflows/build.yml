@@ -27,6 +27,7 @@ jobs:
           sha256: 'EDC24CE14A1FC402DDB87CACDCA497EA25BB648286B879EDFC93A4E9D57AD5DC'
       - name: extract famitracker binary archive file
         run: |
+          cd src
           7z x FamiTracker-v0.4.6.zip
           rm FamiTracker-v0.4.6.zip
       - name: build installer
