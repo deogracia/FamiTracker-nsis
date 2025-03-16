@@ -35,3 +35,8 @@ jobs:
           dir
           dir src
           makensis /V4 famitracker.nsi
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: upload installer
+          path: output\FamiTracker_0.4.6-setup.exe
