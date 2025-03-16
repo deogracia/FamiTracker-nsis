@@ -32,4 +32,5 @@ jobs:
       - name: build installer
         run: |
           dir
+          dir src
           makensis /V4 famitracker.nsi
